@@ -1,0 +1,10 @@
+Passing Props as children and functions 
+
+What is a children 
+<Card>
+    Anything written in between this is called children
+</Card> 
+
+
+
+Instead of props in parameters i can also use like this {name}

@@ -1,0 +1,57 @@
+React Js --> Js Library used to UI,UI Components
+
+Why react --> Fast development , optimize
+
+Library --> Focus only on one thing
+
+Framework --> Which handles multiple things 
+
+Used to build Single Page applications
+
+Why to use react ??
+1. React is Component based architecture / Modular 
+2. Reuse
+3. Virtual DOM 
+4. SPA --> Dynamic Updation
+5. State Management
+6. Props --> Data transfer
+7. Hooks Ex:- useState
+
+History 
+Developed by Facebook 
+Jordan --> 2011
+Made an opensource --> 2013
+
+How to install react 
+1. npm create vite@latest
+2. Click on y
+3. enter a project name
+4. First select React and then Js
+After creation it will show 3 commands 
+cd project-name
+npm install
+npm run dev
+
+After executing these 3 commands node_modules will be created
+
+Intro to files/Folders
+
+1. public --> Contains all the static files such as fevicon,image --> Files which doesn't need to build 
+2. src --> Contains the main components to be written 
+    assets(In src) --> fonts, extra css files etc 
+--> Initially the index.html gets executed which contains the App Component 
+--> The App Component refers to the App.
+
+Flow of execution 
+index.html --> We can style using index.css --> Div with an id Root --> Linked with Main.jsx 
+Main.jsx --> Telling us to render the App component 
+App Component contains the code to be rendered
+
+Instead of Main.jsx we might get Index.jsx --> no need to worry 
+
+Jsx --> (html+js)
+The code we written converts into jsx then into React Code then into html 
+This html is rendered by the browser
+
+
+Whenever we create a component use rafce + tab to get the boiler plate code 

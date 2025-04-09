@@ -1,0 +1,14 @@
+Components --> Kind of functions(Just to understand)
+
+We can create class and function based components 
+
+As React got updated --> now we are using only function based components
+
+Component --> A function that gives us html jaisa code to render
+
+For giving a class name to an html element we have to use className because class is reserved keyword in React
+
+Whenever we are creating a component in React do not create Multiple tage at same level (in return statement)
+
+props - Used to pass the data between components 
+
