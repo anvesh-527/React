@@ -1,0 +1,16 @@
+State lifting in React Js
+
+In Props, the data is passed from parent to the child
+But in some cases we need to pass the data from child to parent.
+Example :- When ChildA and childB has to use same state 
+This is where the State Lifting comes into picture 
+
+Instead of creating the state in the child create the state in parent.
+
+The parent should take care of creating,managing,changing the state 
+We can sync all the child components 
+
+All are in sync.
+
+Example:- Used in search suggestion as shown in google.
+

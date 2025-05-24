@@ -20,7 +20,6 @@ function App() {
       <UserCard name="Anvesh" rollno="527" image={Anvesh} style={{"border-radius":"10px"}} />
       <UserCard name="Shiva" rollno="531" image={Shiva} style={{"border-radius":"20px"}} />
       <UserCard name="Abbu" rollno="501" image={Abdul} style={{"border-radius":"30px"}} />
-
     </div> 
   )
 }

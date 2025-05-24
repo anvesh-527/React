@@ -40,7 +40,7 @@ Intro to files/Folders
 2. src --> Contains the main components to be written 
     assets(In src) --> fonts, extra css files etc 
 --> Initially the index.html gets executed which contains the App Component 
---> The App Component refers to the App.
+--> The App Component refers to the App.js 
 
 Flow of execution 
 index.html --> We can style using index.css --> Div with an id Root --> Linked with Main.jsx 

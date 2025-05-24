@@ -1,0 +1,7 @@
+Conditional Rendering
+
+Example :- If logged in then Show Logout Btn 
+           else show login Button
+
+Can be performed using if-else,Ternary operator,Logical Operator,Early return(Base case in recursion)
+

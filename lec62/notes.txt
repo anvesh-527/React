@@ -1,6 +1,7 @@
 React provides us many functionalities 
 Hooks --> Using the hook we can utilize the functionality
 Hook is a utility using which we can hook on to the functionality provided by the React
+--> It is a tarika to use the functionalities.
 
 We can use hooks in function based components
 
@@ -9,7 +10,7 @@ Example :- Counter Component has a state count (that is the number of times the 
 
 --> To manage a state we use useState Hook 
 useState Hook provides 2 things --> 
-    1. state Variable
+    1. state Variable --> Stores state 
     2. state Function --> Which is used to update the state 
 
 
