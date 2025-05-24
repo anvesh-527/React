@@ -1,0 +1,92 @@
+first --> side-effect function
+second --> clean-up function
+third --> comma seperated dependency list
+
+
+variation:1
+  // This will run in each render
+
+  useEffect(() => {
+    alert("This will run on each render");
+  });
+
+  // This will render 2 times 
+  // This is because we are developing in strict mode (Main.jsx) the app will be runned twice.
+
+  const [count,setCount] = useState(0);
+  
+  function handleClick() {
+    setCount(count+1);
+  }
+  
+  return (
+    <div>
+      <button onClick={handleClick}>
+        Click me
+      </button>
+      <p>The button is clicked {count} times</p>
+      {/* Whenever we click this the screen will re-render as we are using the state variables. */}
+    </div>
+  )
+
+variation:2
+This will run only on the first render
+  useEffect(() => {
+    alert("I will run only on first render")
+  }, []);
+By clicking the button we can check this.
+The alert won't be shown
+
+Variation:3(Single Dependency)
+useEffect(() => {
+ alert("I will run every time when the count is updated before it is re-rendered");
+}, [count])
+Executed whenever the count is updated 
+
+
+Variation:4(Multiple dependencies)
+Even if any one is changed the effect will be executed 
+const [count,setCount] = useState(0);
+  const [total,setTotal] = useState(0);
+useEffect(() => {
+    alert("They are being changed");
+  }, [count,total])
+  
+
+  function handleClick() {
+    setCount(count+1);
+  }
+
+  function handleTotal() {
+    setTotal(total+count);
+  }
+
+  The main component code return statement:
+   
+return (
+    <div>
+      <button onClick={handleClick}>
+        Update Count
+      </button>
+      <p>The button is clicked {count} times</p>
+
+      <button onClick={handleTotal}>
+        Update Total
+      </button>
+      <p>Total is {total}</p>
+    </div>
+  )
+
+
+Variation:5
+Adding a clean up function 
+useEffect(() => {
+    alert("Count is updated");
+    return () => {
+      alert("Count is unmounted from UI");
+    }
+  }, [count]);
+On every click the previous count is being unmounted and the new count is being re-rendered.
+
+
+*** In React Documentation,read atleast the caveats 

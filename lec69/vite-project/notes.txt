@@ -1,0 +1,62 @@
+useContext and Prop Drilling(Important in terms of interview)
+
+Prop-Drilling :
+If there is a parent p1 and follows hierarchy 
+p1 -> c1 -> c2 -> c3
+The parent(p1) wants to send the data to the child c3 
+So, it can send it to c1 then c2 then c3 where as c1,c2 doesn't need the data 
+Even thought c1,c2 doesn't need the data we are forcibly giving the data 
+(The passing through the hierarchy is called drilling)
+
+To overcome this prop drilling we use useContext 
+
+The complete process takes place in 3 steps.
+1. Create context
+2. Provide
+3. Consume
+
+Parent p1(Provides context) 
+child c3(consumes context)
+
+// S-1 : Create Context
+const UserContext = createContext();
+
+// S-2: Wrap all the child inside a provider
+// We have to wrap all those childs who can become providers in <UserContext.Provider>
+
+// S-3: Pass Value
+
+// S-4: Consumer ke andar jaake consume karlo
+
+function App() {
+  const [user,setUser] = useState({name:"Anvesh"});
+  return (
+    <div>
+      <UserContext.Provider value={user} >
+        <A />
+      </UserContext.Provider>
+      
+    </div>
+  )
+}
+
+export default App
+export {UserContext}
+
+
+C.jsx
+import React from 'react'
+import { UserContext } from '../App'
+import { useContext } from 'react'
+const C = () => {
+    const user = useContext(UserContext);
+  return (
+    <div>
+      <h1>{user.name}</h1>
+    </div>
+  )
+}
+
+export default C
+
+
